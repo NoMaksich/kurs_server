@@ -22,15 +22,15 @@ int main(int argc, char *argv[])
     unsigned short port = 33333; /**< Порт по умолчанию */
     int qlen = 10; /**< Длина очереди по умолчанию */
     std::string dbFile = "/etc/vcalc.conf"; /**< Путь к файлу базы данных. */
-
+    std::string LogFile = "/var/log/vcalc.log";
     int opt;
-    while ((opt = getopt(argc, argv, "p:q:d:h:?")) != -1) {
+    while ((opt = getopt(argc, argv, "p:l:d:h:?")) != -1) {
         switch (opt) {
         case 'p':
             port = std::stoi(optarg);
             break;
-        case 'q':
-            qlen = std::stoi(optarg);
+        case 'l':
+            LogFile = optarg;
             break;
         case 'd':
             dbFile = optarg;
@@ -51,9 +51,14 @@ int main(int argc, char *argv[])
         }
     }
 
+    if (argc == 1) {
+        std::cout << "Usage: " << argv[0] << " -p <port> -q <queue_length> -d <database_file>" << std::endl;
+        return 0;
+    }
     try {
         // Запуск сервера с заданными параметрами
         std::cout << "Server started on port: " << port << std::endl;
+        ErrorLog::LogFile = LogFile;
         Server server(port, qlen, dbFile);
         server.get_base(dbFile);
         server.startListening(server);

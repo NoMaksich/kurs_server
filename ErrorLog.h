@@ -21,4 +21,5 @@ public:
      * @param errorMessage Сообщение об ошибке.
      */
     static void logError(bool critical, const std::string& errorMessage);
+    static std::string LogFile;
 };

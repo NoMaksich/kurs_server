@@ -17,8 +17,10 @@
  * @param critical Флаг, указывающий на критичность ошибки.
  * @param errorMessage Сообщение об ошибке.
  */
+std::string ErrorLog::LogFile = "default_log_file.txt";
+
 void ErrorLog::logError(bool critical, const std::string& errorMessage) {
-    std::ofstream logFile("/var/log/vcalc.log", std::ios_base::app); // Открываем лог-файл для записи
+    std::ofstream logFile(LogFile, std::ios_base::app); // Открываем лог-файл для записи
     if (logFile.is_open()) {
         auto now = std::chrono::system_clock::now();
         time_t now_c = std::chrono::system_clock::to_time_t(now);
