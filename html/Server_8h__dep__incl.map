@@ -1,0 +1,5 @@
+<map id="Server.h" name="Server.h">
+<area shape="rect" id="node1" title="Модуль для прослушки сокета, чтения БД, аутентификации и вычислений" alt="" coords="64,5,139,32"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="Главный модуль сервера" alt="" coords="5,80,88,107"/>
+<area shape="rect" id="node3" href="$Server_8cpp.html" title="Раулизация модуля для прослушки сокета, чтения БД, аутентификации и вычислений" alt="" coords="112,80,203,107"/>
+</map>

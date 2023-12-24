@@ -1,0 +1,282 @@
+\hypertarget{classServer}{}\doxysection{Класс Server}
+\label{classServer}\index{Server@{Server}}
+
+
+Модуль для прослушки сокета, чтения БД, аутентификации и вычислений.  
+
+
+
+
+{\ttfamily \#include $<$Server.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classServer_ab8bb7e6f95cf171ecdd216a66ca9574c}{Server}} (unsigned short port, int qlen, const std\+::string \&db)
+\begin{DoxyCompactList}\small\item\em Конструктор сервера. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classServer_a1b2188aa1a637703e5d205fb1009db96}\label{classServer_a1b2188aa1a637703e5d205fb1009db96}} 
+void \mbox{\hyperlink{classServer_a1b2188aa1a637703e5d205fb1009db96}{connecting}} ()
+\begin{DoxyCompactList}\small\item\em Метод для установления соединения. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServer_aae7f4b40fa9043dc89acb7746fa134bc}{get\+\_\+base}} (const std\+::string \&\mbox{\hyperlink{classServer_ac921af958656e1c4b4467591d9dd4f0e}{db\+\_\+file}})
+\begin{DoxyCompactList}\small\item\em Метод для получения данных из базы. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classServer_a019091ca8914df88e3b2ddac46fddc34}{authentication}} (int \mbox{\hyperlink{classServer_ad9324355856703e85cf2e5672609ec84}{work\+\_\+sock}}, const std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ \&credentials)
+\begin{DoxyCompactList}\small\item\em Метод аутентификации пользователя. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classServer_abfaceb1db7f623d0a71687947d9a0a0a}{quad}} (int \mbox{\hyperlink{classServer_ad9324355856703e85cf2e5672609ec84}{work\+\_\+sock}})
+\begin{DoxyCompactList}\small\item\em Метод для выполнения операции квадрата числа. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classServer_ac3d2e70b4c89d7f44761c8e4def32206}{str\+\_\+read}} (int \mbox{\hyperlink{classServer_ad9324355856703e85cf2e5672609ec84}{work\+\_\+sock}})
+\begin{DoxyCompactList}\small\item\em Метод для чтения строки из сокета. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classServer_a4b3aa2579cb1c8cd1d069582c14d0fa6}{$\sim$\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Деструктор сервера. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classServer_adde3ee3568a57358709c6a56423bf84a}{start\+Listening}} (\mbox{\hyperlink{classServer}{Server}} \&server)
+\begin{DoxyCompactList}\small\item\em Метод для запуска прослушивания подключений. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Открытые атрибуты}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{classServer_ad4f861961385fdf4a4b3cff48b8803c2}{user\+Credentials}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classServer_a57d0bf59cd519dc7fe727c24b69f653b}{operator()}} (int \mbox{\hyperlink{classServer_ad50f36033cd401e7f05bd1f847adb91e}{sock}})
+\begin{DoxyCompactList}\small\item\em Оператор () для обработки подключений. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые данные}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classServer_ac921af958656e1c4b4467591d9dd4f0e}{db\+\_\+file}}
+\item 
+int \mbox{\hyperlink{classServer_ad9324355856703e85cf2e5672609ec84}{work\+\_\+sock}}
+\item 
+int \mbox{\hyperlink{classServer_ad50f36033cd401e7f05bd1f847adb91e}{sock}}
+\item 
+std\+::string \mbox{\hyperlink{classServer_a307fcdc7cdda743c0239d1202096f18e}{login}}
+\item 
+std\+::string \mbox{\hyperlink{classServer_a91a0726789eb604a3faac55720aa6b81}{password}}
+\item 
+std\+::unique\+\_\+ptr$<$ sockaddr\+\_\+in $>$ \mbox{\hyperlink{classServer_a94cd700bcc038e1cffe3b0849c49ba49}{self\+\_\+addr}}
+\item 
+std\+::unique\+\_\+ptr$<$ sockaddr\+\_\+in $>$ \mbox{\hyperlink{classServer_ac2379f0fc836ff68fc10ca4ad2c1e951}{foreign\+\_\+addr}}
+\item 
+int \mbox{\hyperlink{classServer_a885d9c1b64ec3f9100f4c999156add7c}{queue\+Len}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Модуль для прослушки сокета, чтения БД, аутентификации и вычислений. 
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{classServer_ab8bb7e6f95cf171ecdd216a66ca9574c}\label{classServer_ab8bb7e6f95cf171ecdd216a66ca9574c}} 
+\index{Server@{Server}!Server@{Server}}
+\index{Server@{Server}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{Server()}{Server()}}
+{\footnotesize\ttfamily Server\+::\+Server (\begin{DoxyParamCaption}\item[{unsigned short}]{port,  }\item[{int}]{qlen,  }\item[{const std\+::string \&}]{db }\end{DoxyParamCaption})}
+
+
+
+Конструктор сервера. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em port} & Порт, на котором будет работать сервер. \\
+\hline
+{\em qlen} & Длина очереди подключений. \\
+\hline
+{\em db} & Путь к файлу базы данных.\\
+\hline
+{\em port} & Порт, на котором будет работать сервер. \\
+\hline
+{\em qlen} & Длина очереди. \\
+\hline
+{\em db} & Путь к файлу базы данных. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServer_a4b3aa2579cb1c8cd1d069582c14d0fa6}\label{classServer_a4b3aa2579cb1c8cd1d069582c14d0fa6}} 
+\index{Server@{Server}!````~Server@{$\sim$Server}}
+\index{````~Server@{$\sim$Server}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{$\sim$Server()}{~Server()}}
+{\footnotesize\ttfamily Server\+::$\sim$\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Деструктор сервера. 
+
+Метод для закрытия сокета и освобождения ресурсов. 
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{classServer_a019091ca8914df88e3b2ddac46fddc34}\label{classServer_a019091ca8914df88e3b2ddac46fddc34}} 
+\index{Server@{Server}!authentication@{authentication}}
+\index{authentication@{authentication}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{authentication()}{authentication()}}
+{\footnotesize\ttfamily bool Server\+::authentication (\begin{DoxyParamCaption}\item[{int}]{work\+\_\+sock,  }\item[{const std\+::unordered\+\_\+map$<$ std\+::string, std\+::string $>$ \&}]{credentials }\end{DoxyParamCaption})}
+
+
+
+Метод аутентификации пользователя. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em work\+\_\+sock} & Сокет для работы с пользователем. \\
+\hline
+{\em credentials} & Список учетных данных пользователя. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Возвращает true, если аутентификация прошла успешно. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServer_aae7f4b40fa9043dc89acb7746fa134bc}\label{classServer_aae7f4b40fa9043dc89acb7746fa134bc}} 
+\index{Server@{Server}!get\_base@{get\_base}}
+\index{get\_base@{get\_base}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{get\_base()}{get\_base()}}
+{\footnotesize\ttfamily void Server\+::get\+\_\+base (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{db\+\_\+file }\end{DoxyParamCaption})}
+
+
+
+Метод для получения данных из базы. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em db\+\_\+file} & Путь к файлу базы данных. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServer_a57d0bf59cd519dc7fe727c24b69f653b}\label{classServer_a57d0bf59cd519dc7fe727c24b69f653b}} 
+\index{Server@{Server}!operator()@{operator()}}
+\index{operator()@{operator()}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily void Server\+::operator() (\begin{DoxyParamCaption}\item[{int}]{work\+\_\+sock }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Оператор () для обработки подключений. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em sock} & Сокет для работы с пользователем.\\
+\hline
+{\em work\+\_\+sock} & Сокет для работы с пользователем. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServer_abfaceb1db7f623d0a71687947d9a0a0a}\label{classServer_abfaceb1db7f623d0a71687947d9a0a0a}} 
+\index{Server@{Server}!quad@{quad}}
+\index{quad@{quad}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{quad()}{quad()}}
+{\footnotesize\ttfamily float Server\+::quad (\begin{DoxyParamCaption}\item[{int}]{work\+\_\+sock }\end{DoxyParamCaption})}
+
+
+
+Метод для выполнения операции квадрата числа. 
+
+Метод для выполнения операции сумма квадратов значений вектора.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em work\+\_\+sock} & Сокет для работы с пользователем. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Возвращает результат операции квадрата числа.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Аргументы}
+{\em work\+\_\+sock} & Сокет для работы с пользователем. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Возвращает результат операции суммы квадратов значений вектора. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classServer_adde3ee3568a57358709c6a56423bf84a}\label{classServer_adde3ee3568a57358709c6a56423bf84a}} 
+\index{Server@{Server}!startListening@{startListening}}
+\index{startListening@{startListening}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{startListening()}{startListening()}}
+{\footnotesize\ttfamily void Server\+::start\+Listening (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classServer}{Server}} \&}]{server }\end{DoxyParamCaption})}
+
+
+
+Метод для запуска прослушивания подключений. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em server} & Сервер, который будет прослушивать подключения.\\
+\hline
+{\em server} & ссылка на объект класса, который будет прослушивать подключения. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classServer_ac3d2e70b4c89d7f44761c8e4def32206}\label{classServer_ac3d2e70b4c89d7f44761c8e4def32206}} 
+\index{Server@{Server}!str\_read@{str\_read}}
+\index{str\_read@{str\_read}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{str\_read()}{str\_read()}}
+{\footnotesize\ttfamily std\+::string Server\+::str\+\_\+read (\begin{DoxyParamCaption}\item[{int}]{work\+\_\+sock }\end{DoxyParamCaption})}
+
+
+
+Метод для чтения строки из сокета. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em work\+\_\+sock} & Сокет для работы с пользователем. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Возвращает строку, прочитанную из сокета. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classServer_ac921af958656e1c4b4467591d9dd4f0e}\label{classServer_ac921af958656e1c4b4467591d9dd4f0e}} 
+\index{Server@{Server}!db\_file@{db\_file}}
+\index{db\_file@{db\_file}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{db\_file}{db\_file}}
+{\footnotesize\ttfamily std\+::string Server\+::db\+\_\+file\hspace{0.3cm}{\ttfamily [private]}}
+
+Путь к файлу базы данных. \mbox{\Hypertarget{classServer_ac2379f0fc836ff68fc10ca4ad2c1e951}\label{classServer_ac2379f0fc836ff68fc10ca4ad2c1e951}} 
+\index{Server@{Server}!foreign\_addr@{foreign\_addr}}
+\index{foreign\_addr@{foreign\_addr}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{foreign\_addr}{foreign\_addr}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$sockaddr\+\_\+in$>$ Server\+::foreign\+\_\+addr\hspace{0.3cm}{\ttfamily [private]}}
+
+Указатель на структуру с адресом клиента. \mbox{\Hypertarget{classServer_a307fcdc7cdda743c0239d1202096f18e}\label{classServer_a307fcdc7cdda743c0239d1202096f18e}} 
+\index{Server@{Server}!login@{login}}
+\index{login@{login}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{login}{login}}
+{\footnotesize\ttfamily std\+::string Server\+::login\hspace{0.3cm}{\ttfamily [private]}}
+
+Логин пользователя. \mbox{\Hypertarget{classServer_a91a0726789eb604a3faac55720aa6b81}\label{classServer_a91a0726789eb604a3faac55720aa6b81}} 
+\index{Server@{Server}!password@{password}}
+\index{password@{password}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{password}{password}}
+{\footnotesize\ttfamily std\+::string Server\+::password\hspace{0.3cm}{\ttfamily [private]}}
+
+Пароль пользователя. \mbox{\Hypertarget{classServer_a885d9c1b64ec3f9100f4c999156add7c}\label{classServer_a885d9c1b64ec3f9100f4c999156add7c}} 
+\index{Server@{Server}!queueLen@{queueLen}}
+\index{queueLen@{queueLen}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{queueLen}{queueLen}}
+{\footnotesize\ttfamily int Server\+::queue\+Len\hspace{0.3cm}{\ttfamily [private]}}
+
+Длина очереди подключений. \mbox{\Hypertarget{classServer_a94cd700bcc038e1cffe3b0849c49ba49}\label{classServer_a94cd700bcc038e1cffe3b0849c49ba49}} 
+\index{Server@{Server}!self\_addr@{self\_addr}}
+\index{self\_addr@{self\_addr}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{self\_addr}{self\_addr}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$sockaddr\+\_\+in$>$ Server\+::self\+\_\+addr\hspace{0.3cm}{\ttfamily [private]}}
+
+Указатель на структуру с адресом сервера. \mbox{\Hypertarget{classServer_ad50f36033cd401e7f05bd1f847adb91e}\label{classServer_ad50f36033cd401e7f05bd1f847adb91e}} 
+\index{Server@{Server}!sock@{sock}}
+\index{sock@{sock}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{sock}{sock}}
+{\footnotesize\ttfamily int Server\+::sock\hspace{0.3cm}{\ttfamily [private]}}
+
+Сокет сервера. \mbox{\Hypertarget{classServer_ad4f861961385fdf4a4b3cff48b8803c2}\label{classServer_ad4f861961385fdf4a4b3cff48b8803c2}} 
+\index{Server@{Server}!userCredentials@{userCredentials}}
+\index{userCredentials@{userCredentials}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{userCredentials}{userCredentials}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, std\+::string$>$ Server\+::user\+Credentials}
+
+Список учетных данных пользователей. \mbox{\Hypertarget{classServer_ad9324355856703e85cf2e5672609ec84}\label{classServer_ad9324355856703e85cf2e5672609ec84}} 
+\index{Server@{Server}!work\_sock@{work\_sock}}
+\index{work\_sock@{work\_sock}!Server@{Server}}
+\doxysubsubsection{\texorpdfstring{work\_sock}{work\_sock}}
+{\footnotesize\ttfamily int Server\+::work\+\_\+sock\hspace{0.3cm}{\ttfamily [private]}}
+
+Сокет для работы с пользователем. 
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Server_8h}{Server.\+h}}\item 
+\mbox{\hyperlink{Server_8cpp}{Server.\+cpp}}\end{DoxyCompactItemize}

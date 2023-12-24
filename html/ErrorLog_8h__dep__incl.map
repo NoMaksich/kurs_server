@@ -1,0 +1,6 @@
+<map id="ErrorLog.h" name="ErrorLog.h">
+<area shape="rect" id="node1" title="Модуль обработки ошибок для сервера" alt="" coords="113,5,201,32"/>
+<area shape="rect" id="node2" href="$main_8cpp.html" title="Главный модуль сервера" alt="" coords="5,80,88,107"/>
+<area shape="rect" id="node3" href="$Server_8cpp.html" title="Раулизация модуля для прослушки сокета, чтения БД, аутентификации и вычислений" alt="" coords="112,80,203,107"/>
+<area shape="rect" id="node4" href="$ErrorLog_8cpp.html" title="Реализация модуля обработки ошибок для сервера" alt="" coords="227,80,330,107"/>
+</map>
