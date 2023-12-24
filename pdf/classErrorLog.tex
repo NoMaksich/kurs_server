@@ -14,6 +14,11 @@
 \item 
 static void \mbox{\hyperlink{classErrorLog_abf55b4742ac778b285f0c66bcc28f551}{log\+Error}} (bool critical, const std\+::string \&error\+Message)
 \begin{DoxyCompactList}\small\item\em Записывает ошибку в лог-\/файл. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Статические открытые данные}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classErrorLog_af77a233bcac0d6147c6dfa3bdfcf2c99}{Log\+File}} = \char`\"{}default\+\_\+log\+\_\+file.\+txt\char`\"{}
+\begin{DoxyCompactList}\small\item\em Модуль записи ошибки в лог файл. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Подробное описание}
@@ -30,7 +35,25 @@ static void \mbox{\hyperlink{classErrorLog_abf55b4742ac778b285f0c66bcc28f551}{lo
 
 Записывает ошибку в лог-\/файл. 
 
-Модуль записи ошибки в лог файл.
+
+\begin{DoxyParams}{Аргументы}
+{\em critical} & Флаг, указывающий на критичность ошибки. \\
+\hline
+{\em error\+Message} & Сообщение об ошибке. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{classErrorLog_af77a233bcac0d6147c6dfa3bdfcf2c99}\label{classErrorLog_af77a233bcac0d6147c6dfa3bdfcf2c99}} 
+\index{ErrorLog@{ErrorLog}!LogFile@{LogFile}}
+\index{LogFile@{LogFile}!ErrorLog@{ErrorLog}}
+\doxysubsubsection{\texorpdfstring{LogFile}{LogFile}}
+{\footnotesize\ttfamily std\+::string Error\+Log\+::\+Log\+File = \char`\"{}default\+\_\+log\+\_\+file.\+txt\char`\"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Модуль записи ошибки в лог файл. 
 
 
 \begin{DoxyParams}{Аргументы}
