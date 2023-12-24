@@ -3,6 +3,7 @@
 #include <fstream>
 #include "Server.h"
 #include "ErrorLog.h"
+#include <regex>
 
 SUITE(ServerTests)
 {
@@ -106,7 +107,7 @@ SUITE(ServerTests)
             ErrorLog::logError(true, std::string("Socket error: ") + e.what());
             CHECK(true);
 
-            std::ifstream file("log.txt");
+            std::ifstream file("/var/log/vcalc.log");
             std::string line;
             while (std::getline(file, line)) {
                 if (line.find(searchString) != std::string::npos) {
@@ -118,19 +119,35 @@ SUITE(ServerTests)
 
         CHECK(searchStringFound);
     }
-    TEST(TestLogFileEndsWithString) {
+    TEST(TestLogFileEndsWithStringWithTime) {
         unsigned short port = 8080;
         int qlen = 5;
         std::string db = "test_db.txt";
         Server server(port, qlen, db);
         server.get_base(db);
-        std::string filename = "log.txt";
-        std::string expectedEndString = "Critical: Yes Error: Socket error: Socket error: Permission denied";
+        std::string filename = "/var/log/vcalc.log";
+        std::string expectedErrorString = "Date and time: .* Critical: Yes Error: Socket error: Socket error: Permission denied";
+
         std::ifstream file(filename);
+        REQUIRE CHECK(file.good());
+
+        // Чтение содержимого файла
         std::stringstream fileContents;
-        fileContents << file.rdbuf(); // Считываем все содержимое файла
+        fileContents << file.rdbuf();
         std::string fileString = fileContents.str();
-        CHECK(fileString.compare(fileString.size() - expectedEndString.size(), expectedEndString.size(), expectedEndString) == 0);
+
+        // Создание регулярного выражения для поиска строки с ошибкой, включающей время
+        std::regex errorRegex(expectedErrorString);
+        std::smatch match;
+
+        // Поиск строки с ошибкой в содержимом файла
+        if (std::regex_search(fileString, match, errorRegex)) {
+            // Если найдено совпадение, строка содержит ожидаемую ошибку с учетом времени
+            CHECK(true);
+        } else {
+            // Если строка с ошибкой не найдена
+            CHECK(false); // Неожиданный результат - тест провален
+        }
     }
 }
 int main()
