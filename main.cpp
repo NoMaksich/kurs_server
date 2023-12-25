@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     std::string dbFile = "/etc/vcalc.conf"; /**< Путь к файлу базы данных. */
     std::string LogFile = "/var/log/vcalc.log";
     int opt;
-    while ((opt = getopt(argc, argv, "p:l:d:h:?")) != -1) {
+    while ((opt = getopt(argc, argv, "p:l:d:?:h")) != -1) {
         switch (opt) {
         case 'p':
             port = std::stoi(optarg);
@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
             break;
         case 'h':
             // Вывод справки по использованию приложения
-            std::cout << "Usage: " << argv[0] << " -p <port> -q <queue_length> -d <database_file>" << std::endl;
+            std::cout << "Usage: " << argv[0] << " -p <port> -l <log_file> -d <database_file>" << std::endl;
             return 0;
         case '?':
             // Обработка ошибок ввода аргументов командной строки
@@ -46,13 +46,13 @@ int main(int argc, char *argv[])
             } else {
                 std::cerr << "Unknown option: -" << static_cast<char>(optopt) << std::endl;
             }
-            std::cerr << "Usage: " << argv[0] << " -p <port> -q <queue_length> -d <database_file>" << std::endl;
+            std::cerr << "Usage: " << argv[0] << " -p <port> -l <log_file> -d <database_file>" << std::endl;
             return 1;
         }
     }
 
     if (argc == 1) {
-        std::cout << "Usage: " << argv[0] << " -p <port> -q <queue_length> -d <database_file>" << std::endl;
+        std::cout << "Usage: " << argv[0] << " -p <port> -l <log_file> -d <database_file>" << std::endl;
         return 0;
     }
     try {
