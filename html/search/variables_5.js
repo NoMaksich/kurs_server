@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['self_5faddr_51',['self_addr',['../classServer.html#a94cd700bcc038e1cffe3b0849c49ba49',1,'Server']]],
-  ['sock_52',['sock',['../classServer.html#ad50f36033cd401e7f05bd1f847adb91e',1,'Server']]]
+  ['usercredentials_47',['userCredentials',['../classServer.html#ad4f861961385fdf4a4b3cff48b8803c2',1,'Server']]]
 ];

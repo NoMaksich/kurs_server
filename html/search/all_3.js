@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['errorlog_3',['ErrorLog',['../classErrorLog.html',1,'']]],
-  ['errorlog_2ecpp_4',['ErrorLog.cpp',['../ErrorLog_8cpp.html',1,'']]],
-  ['errorlog_2eh_5',['ErrorLog.h',['../ErrorLog_8h.html',1,'']]]
+  ['foreign_5faddr_5',['foreign_addr',['../classServer.html#ac2379f0fc836ff68fc10ca4ad2c1e951',1,'Server']]]
 ];

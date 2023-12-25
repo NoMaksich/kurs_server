@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['usercredentials_53',['userCredentials',['../classServer.html#ad4f861961385fdf4a4b3cff48b8803c2',1,'Server']]]
+  ['work_5fsock_48',['work_sock',['../classServer.html#ad9324355856703e85cf2e5672609ec84',1,'Server']]]
 ];

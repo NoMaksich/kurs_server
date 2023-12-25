@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['connecting_35',['connecting',['../classServer.html#a1b2188aa1a637703e5d205fb1009db96',1,'Server']]]
+  ['get_5fbase_32',['get_base',['../classServer.html#aae7f4b40fa9043dc89acb7746fa134bc',1,'Server']]]
 ];

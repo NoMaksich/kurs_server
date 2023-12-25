@@ -31,11 +31,6 @@ public:
     Server(unsigned short port, int qlen, const std::string& db);
 
     /**
-     * @brief Метод для установления соединения.
-     */
-    void connecting();
-
-    /**
      * @brief Метод для получения данных из базы.
      *
      * @param db_file Путь к файлу базы данных.
@@ -85,8 +80,6 @@ private:
     std::string db_file; /**< Путь к файлу базы данных. */
     int work_sock; /**< Сокет для работы с пользователем. */
     int sock; /**< Сокет сервера. */
-    std::string login; /**< Логин пользователя. */
-    std::string password; /**< Пароль пользователя. */
     std::unique_ptr<sockaddr_in> self_addr; /**< Указатель на структуру с адресом сервера. */
     std::unique_ptr<sockaddr_in> foreign_addr; /**< Указатель на структуру с адресом клиента. */
     int queueLen; /**< Длина очереди подключений. */

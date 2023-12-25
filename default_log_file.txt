@@ -1,0 +1,12 @@
+Date and time: 2023-12-24 18:54:47 Critical: Yes Error: Socket error
+Date and time: 2023-12-24 18:54:47 Critical: Yes Error: Socket error
+Date and time: 2023-12-24 18:54:47 Critical: Yes Error: Socket error
+Date and time: 2023-12-24 18:54:47 Critical: Yes Error: Socket error: Socket error: Permission denied
+Date and time: 2023-12-24 20:38:07 Critical: Yes Error: Socket error
+Date and time: 2023-12-24 20:38:07 Critical: Yes Error: Socket error
+Date and time: 2023-12-24 20:38:07 Critical: Yes Error: Socket error
+Date and time: 2023-12-24 20:38:07 Critical: Yes Error: Socket error: Socket error: Permission denied
+Date and time: 2023-12-24 20:40:41 Critical: Yes Error: Socket error
+Date and time: 2023-12-24 20:40:41 Critical: Yes Error: Socket error
+Date and time: 2023-12-24 20:40:41 Critical: Yes Error: Socket error
+Date and time: 2023-12-24 20:40:41 Critical: Yes Error: Socket error: Socket error: Permission denied

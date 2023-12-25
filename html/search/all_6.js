@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['logerror_8',['logError',['../classErrorLog.html#abf55b4742ac778b285f0c66bcc28f551',1,'ErrorLog']]],
-  ['logfile_9',['LogFile',['../classErrorLog.html#af77a233bcac0d6147c6dfa3bdfcf2c99',1,'ErrorLog']]],
-  ['login_10',['login',['../classServer.html#a307fcdc7cdda743c0239d1202096f18e',1,'Server']]]
+  ['main_9',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
+  ['main_2ecpp_10',['main.cpp',['../main_8cpp.html',1,'']]]
 ];

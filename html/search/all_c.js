@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['usercredentials_24',['userCredentials',['../classServer.html#ad4f861961385fdf4a4b3cff48b8803c2',1,'Server']]]
+  ['_7eserver_23',['~Server',['../classServer.html#a4b3aa2579cb1c8cd1d069582c14d0fa6',1,'Server']]]
 ];

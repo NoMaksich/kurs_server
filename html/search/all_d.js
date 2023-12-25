@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['work_5fsock_25',['work_sock',['../classServer.html#ad9324355856703e85cf2e5672609ec84',1,'Server']]]
+  ['_7eserver_24',['~Server',['../classServer.html#a4b3aa2579cb1c8cd1d069582c14d0fa6',1,'Server']]]
 ];

@@ -46,11 +46,19 @@ SUITE(ServerTests)
 
         CHECK(!server.userCredentials.empty());
     }
-    TEST(DatabaseFileNotOpened) {
-        std::string db_file = "nonexistent_db.txt";
-        std::ifstream database(db_file);
-        CHECK(!database.is_open());
+    TEST(DatabaseFileOpenedWithGetBase) {
+    unsigned short port = 8080;
+    int qlen = 5;
+    std::string db_file = "test_db.txt";
+    Server server(port,qlen,db_file);
+
+    try {
+        server.get_base(db_file);
+        CHECK(true);
+    } catch (...) {
+        CHECK(false);
     }
+}
     TEST(GetBaseInvalidFile) {
         unsigned short port = 8080;
         int qlen = 5;

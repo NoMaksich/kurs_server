@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_38',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]]
+  ['operator_28_29_35',['operator()',['../classServer.html#a57d0bf59cd519dc7fe727c24b69f653b',1,'Server']]]
 ];
