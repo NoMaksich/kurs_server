@@ -26,13 +26,11 @@
 \contentsline {subsection}{\numberline {3.2.4}Данные класса}{10}{subsection.3.2.4}%
 \contentsline {subsubsection}{\numberline {3.2.4.1}db\_file}{10}{subsubsection.3.2.4.1}%
 \contentsline {subsubsection}{\numberline {3.2.4.2}foreign\_addr}{10}{subsubsection.3.2.4.2}%
-\contentsline {subsubsection}{\numberline {3.2.4.3}login}{10}{subsubsection.3.2.4.3}%
-\contentsline {subsubsection}{\numberline {3.2.4.4}password}{10}{subsubsection.3.2.4.4}%
-\contentsline {subsubsection}{\numberline {3.2.4.5}queueLen}{11}{subsubsection.3.2.4.5}%
-\contentsline {subsubsection}{\numberline {3.2.4.6}self\_addr}{11}{subsubsection.3.2.4.6}%
-\contentsline {subsubsection}{\numberline {3.2.4.7}sock}{11}{subsubsection.3.2.4.7}%
-\contentsline {subsubsection}{\numberline {3.2.4.8}userCredentials}{11}{subsubsection.3.2.4.8}%
-\contentsline {subsubsection}{\numberline {3.2.4.9}work\_sock}{11}{subsubsection.3.2.4.9}%
+\contentsline {subsubsection}{\numberline {3.2.4.3}queueLen}{10}{subsubsection.3.2.4.3}%
+\contentsline {subsubsection}{\numberline {3.2.4.4}self\_addr}{10}{subsubsection.3.2.4.4}%
+\contentsline {subsubsection}{\numberline {3.2.4.5}sock}{11}{subsubsection.3.2.4.5}%
+\contentsline {subsubsection}{\numberline {3.2.4.6}userCredentials}{11}{subsubsection.3.2.4.6}%
+\contentsline {subsubsection}{\numberline {3.2.4.7}work\_sock}{11}{subsubsection.3.2.4.7}%
 \contentsline {chapter}{\numberline {4}Файлы}{13}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Файл Error\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Log.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{13}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Подробное описание}{13}{subsection.4.1.1}%
