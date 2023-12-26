@@ -76,6 +76,7 @@ void Server::get_base(const string& db_file)
     try {
         ifstream database(db_file);
         if (!database.is_open()) {
+        	throw std::system_error(errno, std::generic_category(), "Failed to open database file");
             ErrorLog::logError(true, "Failed to open database file");
         }
 
@@ -87,6 +88,7 @@ void Server::get_base(const string& db_file)
                 string password = line.substr(delimiterPos + 1);
                 userCredentials.emplace(identifier, password);
             } else {
+            	throw std::system_error(errno, std::generic_category(), "Invalid database format");
                 ErrorLog::logError(true, "Invalid database format");
             }
         }
