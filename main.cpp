@@ -62,6 +62,9 @@ int main(int argc, char *argv[])
         Server server(port, qlen, dbFile);
         server.get_base(dbFile);
         server.startListening(server);
+    } catch (const std::system_error& e) {
+        std::cerr << "System error occurred: " << e.what() << std::endl;
+        return 1;
     } catch (const std::exception &e) {
         // Обработка исключений, возникающих при запуске сервера
         std::cerr << "Exception: " << e.what() << std::endl;

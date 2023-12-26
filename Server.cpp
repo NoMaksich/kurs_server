@@ -73,7 +73,6 @@ Server::Server(unsigned short port, int qlen, const string& db):
 */
 void Server::get_base(const string& db_file)
 {
-    try {
         ifstream database(db_file);
         if (!database.is_open()) {
         	throw std::system_error(errno, std::generic_category(), "Failed to open database file");
@@ -93,9 +92,6 @@ void Server::get_base(const string& db_file)
             }
         }
         database.close();
-    } catch (const exception& e) {
-        cerr << "Error occurred in get_base(): " << e.what() << endl;
-    }
 }
 
 /**
